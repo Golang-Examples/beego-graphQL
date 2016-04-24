@@ -1,0 +1,4 @@
+2016/04/24 21:18:43 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/24 21:18:50 [graphql.go:44][I] Sending response &{map[latestUser:Hello world!] []} 
+2016/04/24 21:18:50 [router.go:829][D] | GET        | /api/v1/graphql                          | 1.542549ms       | match      | /api/v1/graphql/                         | 
+2016/04/24 21:18:52 [asm_amd64.s:1998][I] http server Running on :8080
