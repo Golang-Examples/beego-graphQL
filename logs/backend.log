@@ -82,3 +82,315 @@
 2016/04/25 00:41:26 [object.go:58][I] {1 Jacob Taylor emilyjohnson@example.com 523238 2643272628580112 2016-04-24 22:43:39.572191 +0530 IST} 
 2016/04/25 00:41:26 [graphql.go:38][I] map[latestUser:map[Reg_key:2643272628580112]] 
 2016/04/25 00:41:26 [router.go:829][D] | GET        | /api/v1/graphql                          | 3.828819ms       | match      | /api/v1/graphql/                         | 
+2016/04/25 00:44:18 [object.go:58][I] {1 Jacob Taylor emilyjohnson@example.com 523238 2643272628580112 2016-04-24 22:43:39.572191 +0530 IST} 
+2016/04/25 00:44:18 [graphql.go:38][I] map[latestUser:map[Reg_key:2643272628580112]] 
+2016/04/25 00:44:18 [router.go:829][D] | GET        | /api/v1/graphql                          | 15.149177ms      | match      | /api/v1/graphql/                         | 
+2016/04/25 00:48:00 [object.go:58][I] {1 Jacob Taylor emilyjohnson@example.com 523238 2643272628580112 2016-04-24 22:43:39.572191 +0530 IST} 
+2016/04/25 00:48:00 [graphql.go:38][I] map[latestUser:map[Email:emilyjohnson@example.com]] 
+2016/04/25 00:48:00 [router.go:829][D] | GET        | /api/v1/graphql                          | 8.995428ms       | match      | /api/v1/graphql/                         | 
+2016/04/25 00:49:36 [object.go:58][I] {1 Jacob Taylor emilyjohnson@example.com 523238 2643272628580112 2016-04-24 22:43:39.572191 +0530 IST} 
+2016/04/25 00:49:36 [graphql.go:38][I] map[latestUser:map[First:Jacob]] 
+2016/04/25 00:49:36 [router.go:829][D] | GET        | /api/v1/graphql                          | 6.556092ms       | match      | /api/v1/graphql/                         | 
+2016/04/25 00:49:46 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:20:56 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:29:14 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:29:25 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:29:35 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:30:27 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:31:45 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:32:33 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:32:51 [object.go:58][I] {1 Jacob Taylor emilyjohnson@example.com 523238 2643272628580112 2016-04-24 22:43:39.572191 +0530 IST} 
+2016/04/25 01:32:51 [graphql.go:38][I] map[latestUser:map[First:Jacob]] 
+2016/04/25 01:32:51 [router.go:829][D] | GET        | /api/v1/graphql                          | 4.674348ms       | match      | /api/v1/graphql/                         | 
+2016/04/25 01:32:56 [graphql.go:34][D] Failed to execute graphql operation [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:32:56 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:32:56 [router.go:855][C] Handler crashed with error [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:32:56 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:32:56 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:32:56 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:32:56 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:32:56 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:32:56 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:32:56 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:32:56 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:32:56 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:32:56 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:33:29 [graphql.go:34][D] Failed to execute graphql operation [Field "users" of type "[AuthUser]" must have a sub selection.] 
+2016/04/25 01:33:29 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:33:29 [router.go:855][C] Handler crashed with error [Field "users" of type "[AuthUser]" must have a sub selection.] 
+2016/04/25 01:33:29 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:33:29 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:33:29 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:33:29 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:33:29 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:33:29 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:33:29 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:33:29 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:33:29 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:33:29 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:33:36 [graphql.go:34][D] Failed to execute graphql operation [Syntax Error GraphQL request (1:8) Expected Name, found }
+
+1: {users{}}
+          ^
+] 
+2016/04/25 01:33:36 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:33:36 [router.go:855][C] Handler crashed with error [Syntax Error GraphQL request (1:8) Expected Name, found }
+
+1: {users{}}
+          ^
+] 
+2016/04/25 01:33:36 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:33:36 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:33:36 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:33:36 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:33:36 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:33:36 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:33:36 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:33:36 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:33:36 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:33:36 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:34:09 [graphql.go:34][D] Failed to execute graphql operation [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:34:09 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:34:09 [router.go:855][C] Handler crashed with error [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:34:09 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:34:09 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:34:09 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:34:09 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:34:09 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:34:09 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:34:09 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:34:09 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:34:09 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:34:09 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:34:35 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:36:03 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:36:09 [graphql.go:34][D] Failed to execute graphql operation [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:36:09 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:36:09 [router.go:855][C] Handler crashed with error [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:36:09 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:36:09 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:36:09 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:36:09 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:36:09 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:36:09 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:36:09 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:36:09 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:36:09 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:36:09 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:36:11 [graphql.go:34][D] Failed to execute graphql operation [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:36:11 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:36:11 [router.go:855][C] Handler crashed with error [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:36:11 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:36:11 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:36:11 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:36:11 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:36:11 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:36:11 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:36:11 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:36:11 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:36:11 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:36:11 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:36:42 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:38:03 [graphql.go:34][D] Failed to execute graphql operation [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:38:03 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:38:03 [router.go:855][C] Handler crashed with error [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:38:03 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:38:03 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:38:03 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:38:03 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:38:03 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:38:03 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:38:03 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:38:03 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:38:03 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:38:03 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:39:25 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:39:29 [graphql.go:34][D] Failed to execute graphql operation [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:39:29 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:39:29 [router.go:855][C] Handler crashed with error [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:39:29 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:39:29 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:39:29 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:39:29 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:39:29 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:39:29 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:39:29 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:39:29 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:39:29 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:39:29 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:39:40 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:39:54 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:39:57 [graphql.go:34][D] Failed to execute graphql operation [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:39:57 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:39:57 [router.go:855][C] Handler crashed with error [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:39:57 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:39:57 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:39:57 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:39:57 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:39:57 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:39:57 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:39:57 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:39:57 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:39:57 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:39:57 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:40:12 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:40:15 [graphql.go:34][D] Failed to execute graphql operation [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:40:15 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:40:15 [router.go:855][C] Handler crashed with error [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:40:15 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:40:15 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:40:15 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:40:15 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:40:15 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:40:15 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:40:15 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:40:15 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:40:15 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:40:15 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:41:30 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:41:36 [graphql.go:34][D] Failed to execute graphql operation [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:41:36 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:41:36 [router.go:855][C] Handler crashed with error [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:41:36 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:41:36 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:41:36 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:41:36 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:41:36 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:41:36 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:41:36 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:41:36 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:41:36 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:41:36 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:42:05 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:42:44 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:42:48 [graphql.go:38][I] map[users:[]] 
+2016/04/25 01:42:48 [router.go:829][D] | GET        | /api/v1/graphql                          | 3.971913ms       | match      | /api/v1/graphql/                         | 
+2016/04/25 01:43:10 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:43:36 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:43:42 [graphql.go:34][D] Failed to execute graphql operation [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:43:42 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:43:42 [router.go:855][C] Handler crashed with error [runtime error: invalid memory address or nil pointer dereference] 
+2016/04/25 01:43:42 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:43:42 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:43:42 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:43:42 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:43:42 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:43:42 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:43:42 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:43:42 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:43:42 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:43:42 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:44:50 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:44:56 [graphql.go:38][I] map[users:[]] 
+2016/04/25 01:44:56 [router.go:829][D] | GET        | /api/v1/graphql                          | 4.00966ms        | match      | /api/v1/graphql/                         | 
+2016/04/25 01:45:17 [graphql.go:38][I] map[users:[]] 
+2016/04/25 01:45:17 [router.go:829][D] | GET        | /api/v1/graphql                          | 2.420666ms       | match      | /api/v1/graphql/                         | 
+2016/04/25 01:45:17 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:45:19 [object.go:84][I] ERRROR+=========== [] 
+2016/04/25 01:45:19 [object.go:85][I] DATA+=========== 0 
+2016/04/25 01:45:19 [object.go:87][E] pq: got 1 parameters but the statement requires 0 
+2016/04/25 01:45:19 [graphql.go:38][I] map[users:[]] 
+2016/04/25 01:45:19 [router.go:829][D] | GET        | /api/v1/graphql                          | 69.8011ms        | match      | /api/v1/graphql/                         | 
+2016/04/25 01:45:34 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:45:39 [object.go:84][I] ERRROR+=========== [] 
+2016/04/25 01:45:39 [object.go:85][I] DATA+=========== 0 
+2016/04/25 01:45:39 [object.go:87][E] pq: got 1 parameters but the statement requires 0 
+2016/04/25 01:45:39 [graphql.go:38][I] map[users:[]] 
+2016/04/25 01:45:39 [router.go:829][D] | GET        | /api/v1/graphql                          | 8.644518ms       | match      | /api/v1/graphql/                         | 
+2016/04/25 01:46:06 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:50:45 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:51:35 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:51:39 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:51:45 [object.go:74][E] postgres query builder is not supported yet 
+2016/04/25 01:51:45 [graphql.go:34][D] Failed to execute graphql operation [postgres query builder is not supported yet] 
+2016/04/25 01:51:45 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:51:45 [router.go:855][C] Handler crashed with error [postgres query builder is not supported yet] 
+2016/04/25 01:51:45 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:51:45 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:51:45 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:51:45 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:51:45 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:51:45 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:51:45 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:51:45 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:51:45 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:51:45 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:56:09 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:56:17 [object.go:74][E] postgres query builder is not supported yet 
+2016/04/25 01:56:17 [graphql.go:34][D] Failed to execute graphql operation [postgres query builder is not supported yet] 
+2016/04/25 01:56:17 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:56:17 [router.go:855][C] Handler crashed with error [postgres query builder is not supported yet] 
+2016/04/25 01:56:17 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:56:17 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:56:17 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:56:17 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:56:17 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:56:17 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:56:17 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:56:17 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:56:17 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:56:17 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:56:20 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:56:35 [object.go:74][E] postgres query builder is not supported yet 
+2016/04/25 01:56:35 [graphql.go:34][D] Failed to execute graphql operation [postgres query builder is not supported yet] 
+2016/04/25 01:56:35 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 01:56:35 [router.go:855][C] Handler crashed with error [postgres query builder is not supported yet] 
+2016/04/25 01:56:35 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:56:35 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 01:56:35 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 01:56:35 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 01:56:35 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 01:56:35 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 01:56:35 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 01:56:35 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 01:56:35 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 01:56:35 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 01:57:00 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:57:19 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:57:27 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:57:45 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 01:58:38 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 02:03:35 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 02:04:02 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 02:04:19 [object.go:84][I] SELECT * FROM snaphy_auth_user ORDER BY First DESC LIMIT 10 OFFSET 0 
+2016/04/25 02:04:19 [object.go:88][I] [] 
+2016/04/25 02:04:19 [graphql.go:38][I] map[users:[]] 
+2016/04/25 02:04:19 [router.go:829][D] | GET        | /api/v1/graphql                          | 3.819377ms       | match      | /api/v1/graphql/                         | 
+2016/04/25 02:06:00 [asm_amd64.s:1998][I] http server Running on :8080
+2016/04/25 02:06:05 [object.go:84][I] SELECT * FROM snaphy_auth_user ORDER BY First DESC LIMIT 10 OFFSET 0 
+2016/04/25 02:06:05 [object.go:88][I] [{20 Zoey Jackson chloejones@test.com 442940 3730157730508967 2016-04-25 00:32:28.823618 +0530 IST} {48 Zoey Martinez joshuasmith@test.com 129111 6268608661693458 2016-04-25 01:45:17.765624 +0530 IST} {39 William Moore nataliethompson@test.com 436301 2275141151505705 2016-04-25 01:39:40.166327 +0530 IST} {38 Sophia Anderson matthewharris@example.com 058198 0406103253199202 2016-04-25 01:39:25.248087 +0530 IST} {4 Sophia Harris michaelsmith@example.com 415016 8000860016355688 2016-04-24 22:46:28.542822 +0530 IST} {18 Sophia Brown noahwilson@example.com 055613 8327713597236206 2016-04-25 00:02:54.747409 +0530 IST} {5 Olivia Miller addisonjohnson@example.com 834778 2304903348974183 2016-04-24 22:48:11.518273 +0530 IST} {8 Olivia Miller sophiaharris@test.com 274263 3993399294314639 2016-04-24 22:58:40.714964 +0530 IST} {30 Noah Thomas aidenmartin@example.com 408747 7496402209597853 2016-04-25 01:29:24.972437 +0530 IST} {21 Natalie Robinson masonthomas@test.com 359288 0799258781868501 2016-04-25 00:32:32.72196 +0530 IST}] 
+2016/04/25 02:06:05 [graphql.go:38][I] map[users:[map[First:Zoey] map[First:Zoey] map[First:William] map[First:Sophia] map[First:Sophia] map[First:Sophia] map[First:Olivia] map[First:Olivia] map[First:Noah] map[First:Natalie]]] 
+2016/04/25 02:06:05 [router.go:829][D] | GET        | /api/v1/graphql                          | 4.207133ms       | match      | /api/v1/graphql/                         | 
+2016/04/25 02:06:12 [object.go:84][I] SELECT * FROM snaphy_auth_user ORDER BY First DESC LIMIT 10 OFFSET 0 
+2016/04/25 02:06:12 [object.go:88][I] [{20 Zoey Jackson chloejones@test.com 442940 3730157730508967 2016-04-25 00:32:28.823618 +0530 IST} {48 Zoey Martinez joshuasmith@test.com 129111 6268608661693458 2016-04-25 01:45:17.765624 +0530 IST} {39 William Moore nataliethompson@test.com 436301 2275141151505705 2016-04-25 01:39:40.166327 +0530 IST} {38 Sophia Anderson matthewharris@example.com 058198 0406103253199202 2016-04-25 01:39:25.248087 +0530 IST} {4 Sophia Harris michaelsmith@example.com 415016 8000860016355688 2016-04-24 22:46:28.542822 +0530 IST} {18 Sophia Brown noahwilson@example.com 055613 8327713597236206 2016-04-25 00:02:54.747409 +0530 IST} {5 Olivia Miller addisonjohnson@example.com 834778 2304903348974183 2016-04-24 22:48:11.518273 +0530 IST} {8 Olivia Miller sophiaharris@test.com 274263 3993399294314639 2016-04-24 22:58:40.714964 +0530 IST} {30 Noah Thomas aidenmartin@example.com 408747 7496402209597853 2016-04-25 01:29:24.972437 +0530 IST} {21 Natalie Robinson masonthomas@test.com 359288 0799258781868501 2016-04-25 00:32:32.72196 +0530 IST}] 
+2016/04/25 02:06:12 [graphql.go:38][I] map[users:[map[Last:Jackson] map[Last:Martinez] map[Last:Moore] map[Last:Anderson] map[Last:Harris] map[Last:Brown] map[Last:Miller] map[Last:Miller] map[Last:Thomas] map[Last:Robinson]]] 
+2016/04/25 02:06:12 [router.go:829][D] | GET        | /api/v1/graphql                          | 4.416741ms       | match      | /api/v1/graphql/                         | 
+2016/04/25 02:06:16 [graphql.go:34][D] Failed to execute graphql operation [Syntax Error GraphQL request (1:8) Expected Name, found }
+
+1: {users{}}
+          ^
+] 
+2016/04/25 02:06:16 [router.go:854][C] the request url is  /api/v1/graphql 
+2016/04/25 02:06:16 [router.go:855][C] Handler crashed with error [Syntax Error GraphQL request (1:8) Expected Name, found }
+
+1: {users{}}
+          ^
+] 
+2016/04/25 02:06:16 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 02:06:16 [router.go:861][C] /usr/local/go/src/runtime/panic.go:426 
+2016/04/25 02:06:16 [router.go:861][C] /home/robins/work/src/snaphyAPI/controllers/graphql.go:35 
+2016/04/25 02:06:16 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:472 
+2016/04/25 02:06:16 [router.go:861][C] /usr/local/go/src/reflect/value.go:435 
+2016/04/25 02:06:16 [router.go:861][C] /usr/local/go/src/reflect/value.go:303 
+2016/04/25 02:06:16 [router.go:861][C] /home/robins/work/src/github.com/astaxie/beego/router.go:778 
+2016/04/25 02:06:16 [router.go:861][C] /usr/local/go/src/net/http/server.go:2081 
+2016/04/25 02:06:16 [router.go:861][C] /usr/local/go/src/net/http/server.go:1472 
+2016/04/25 02:06:16 [router.go:861][C] /usr/local/go/src/runtime/asm_amd64.s:1998 
+2016/04/25 02:06:23 [object.go:84][I] SELECT * FROM snaphy_auth_user ORDER BY First DESC LIMIT 10 OFFSET 0 
+2016/04/25 02:06:23 [object.go:88][I] [{20 Zoey Jackson chloejones@test.com 442940 3730157730508967 2016-04-25 00:32:28.823618 +0530 IST} {48 Zoey Martinez joshuasmith@test.com 129111 6268608661693458 2016-04-25 01:45:17.765624 +0530 IST} {39 William Moore nataliethompson@test.com 436301 2275141151505705 2016-04-25 01:39:40.166327 +0530 IST} {38 Sophia Anderson matthewharris@example.com 058198 0406103253199202 2016-04-25 01:39:25.248087 +0530 IST} {4 Sophia Harris michaelsmith@example.com 415016 8000860016355688 2016-04-24 22:46:28.542822 +0530 IST} {18 Sophia Brown noahwilson@example.com 055613 8327713597236206 2016-04-25 00:02:54.747409 +0530 IST} {5 Olivia Miller addisonjohnson@example.com 834778 2304903348974183 2016-04-24 22:48:11.518273 +0530 IST} {8 Olivia Miller sophiaharris@test.com 274263 3993399294314639 2016-04-24 22:58:40.714964 +0530 IST} {30 Noah Thomas aidenmartin@example.com 408747 7496402209597853 2016-04-25 01:29:24.972437 +0530 IST} {21 Natalie Robinson masonthomas@test.com 359288 0799258781868501 2016-04-25 00:32:32.72196 +0530 IST}] 
+2016/04/25 02:06:23 [graphql.go:38][I] map[users:[map[First:Zoey Last:Jackson] map[First:Zoey Last:Martinez] map[First:William Last:Moore] map[First:Sophia Last:Anderson] map[Last:Harris First:Sophia] map[First:Sophia Last:Brown] map[First:Olivia Last:Miller] map[Last:Miller First:Olivia] map[First:Noah Last:Thomas] map[First:Natalie Last:Robinson]]] 
+2016/04/25 02:06:23 [router.go:829][D] | GET        | /api/v1/graphql                          | 10.926466ms      | match      | /api/v1/graphql/                         | 
+2016/04/25 02:06:31 [object.go:84][I] SELECT * FROM snaphy_auth_user ORDER BY First DESC LIMIT 10 OFFSET 0 
+2016/04/25 02:06:31 [object.go:88][I] [{20 Zoey Jackson chloejones@test.com 442940 3730157730508967 2016-04-25 00:32:28.823618 +0530 IST} {48 Zoey Martinez joshuasmith@test.com 129111 6268608661693458 2016-04-25 01:45:17.765624 +0530 IST} {39 William Moore nataliethompson@test.com 436301 2275141151505705 2016-04-25 01:39:40.166327 +0530 IST} {38 Sophia Anderson matthewharris@example.com 058198 0406103253199202 2016-04-25 01:39:25.248087 +0530 IST} {4 Sophia Harris michaelsmith@example.com 415016 8000860016355688 2016-04-24 22:46:28.542822 +0530 IST} {18 Sophia Brown noahwilson@example.com 055613 8327713597236206 2016-04-25 00:02:54.747409 +0530 IST} {5 Olivia Miller addisonjohnson@example.com 834778 2304903348974183 2016-04-24 22:48:11.518273 +0530 IST} {8 Olivia Miller sophiaharris@test.com 274263 3993399294314639 2016-04-24 22:58:40.714964 +0530 IST} {30 Noah Thomas aidenmartin@example.com 408747 7496402209597853 2016-04-25 01:29:24.972437 +0530 IST} {21 Natalie Robinson masonthomas@test.com 359288 0799258781868501 2016-04-25 00:32:32.72196 +0530 IST}] 
+2016/04/25 02:06:31 [graphql.go:38][I] map[users:[map[First:Zoey Last:Jackson Email:chloejones@test.com] map[First:Zoey Last:Martinez Email:joshuasmith@test.com] map[First:William Last:Moore Email:nataliethompson@test.com] map[Email:matthewharris@example.com First:Sophia Last:Anderson] map[First:Sophia Last:Harris Email:michaelsmith@example.com] map[First:Sophia Last:Brown Email:noahwilson@example.com] map[First:Olivia Last:Miller Email:addisonjohnson@example.com] map[First:Olivia Last:Miller Email:sophiaharris@test.com] map[First:Noah Last:Thomas Email:aidenmartin@example.com] map[Last:Robinson Email:masonthomas@test.com First:Natalie]]] 
+2016/04/25 02:06:31 [router.go:829][D] | GET        | /api/v1/graphql                          | 21.396641ms      | match      | /api/v1/graphql/                         | 

@@ -10,6 +10,9 @@ import (
 
 
 
+
+
+
 func main() {
 	if beego.BConfig.RunMode == "dev" {
 		beego.BConfig.WebConfig.DirectoryIndex = true

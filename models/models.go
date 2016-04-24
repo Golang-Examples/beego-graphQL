@@ -63,8 +63,3 @@ func getDatabaseCredentials() (string, string, string){
 	return  database, user, password
 }
 
-
-
-
-
-

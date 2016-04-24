@@ -59,6 +59,36 @@ var RootQuery = graphql.NewObject(graphql.ObjectConfig{
 				return auth_user, nil
 			},
 		},
+		"users": &graphql.Field{
+			Type:  graphql.NewList(authUserSchema),
+			Resolve:func(p graphql.ResolveParams) (interface{}, error) {
+
+				var users []models.AuthUser
+
+				// Get a QuerySeter object. User is table name
+				// Get a QueryBuilder object. Takes DB driver name as parameter
+				// Second return value is error, ignored here
+				qb, err := orm.NewQueryBuilder("mysql")
+
+				if err != nil{
+					beego.Error(err)
+					panic(err)
+				}
+				// Construct query object
+				qb.Select("*").
+				From("snaphy_auth_user").
+				OrderBy("First").Desc().
+				Limit(10).Offset(0)
+				// export raw query string from QueryBuilder object
+				sql := qb.String()
+				beego.Info(sql)
+				// execute the raw query string
+				o := orm.NewOrm()
+				o.Raw(sql).QueryRows(&users)
+				beego.Info(users)
+				return users, nil
+			},
+		},
 	},
 })
 
