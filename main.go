@@ -20,8 +20,14 @@ func main() {
 
 	}
 	configLog()
-
+	addDoc()
 	beego.Run()
+}
+
+func addDoc()  {
+	beego.SetStaticPath("/doc","static")
+	beego.SetStaticPath("/css","static/css")
+	beego.SetStaticPath("/js","static/js")
 }
 
 

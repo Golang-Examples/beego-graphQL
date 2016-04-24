@@ -15,7 +15,6 @@ var authUserSchema = graphql.NewObject(graphql.ObjectConfig{
 	Fields:graphql.Fields{
 		"ID": &graphql.Field{
 			Type:graphql.Int,
-
 		},
 		"First": &graphql.Field{
 			Type:graphql.String,
@@ -62,23 +61,19 @@ var RootQuery = graphql.NewObject(graphql.ObjectConfig{
 		"users": &graphql.Field{
 			Type:  graphql.NewList(authUserSchema),
 			Resolve:func(p graphql.ResolveParams) (interface{}, error) {
-
 				var users []models.AuthUser
-
-				// Get a QuerySeter object. User is table name
-				// Get a QueryBuilder object. Takes DB driver name as parameter
-				// Second return value is error, ignored here
 				qb, err := orm.NewQueryBuilder("mysql")
 
 				if err != nil{
 					beego.Error(err)
 					panic(err)
 				}
+
 				// Construct query object
 				qb.Select("*").
 				From("snaphy_auth_user").
-				OrderBy("First").Desc().
-				Limit(10).Offset(0)
+				OrderBy("Email").Asc().
+				Limit(20).Offset(0)
 				// export raw query string from QueryBuilder object
 				sql := qb.String()
 				beego.Info(sql)
