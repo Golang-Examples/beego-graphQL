@@ -3,6 +3,9 @@ import (
 	_ "github.com/lib/pq"
 	"github.com/astaxie/beego/orm"
 	"time"
+	"fmt"
+	"github.com/astaxie/beego"
+	"github.com/Pallinder/go-randomdata"
 )
 type AuthUser struct {
 	Id          int
@@ -15,23 +18,53 @@ type AuthUser struct {
 }
 
 
-
+//Connect to database..
 func init() {
-	orm.RegisterModel(new(AuthUser))
-	//orm.RegisterModelWithPrefix("snaphy_", new(User))
-	//// orm.RegisterDataBase("default", "mysql", "root:root@/orm_test?charset=utf8")
-	//orm.RegisterDriver("postgres", orm.DRPostgres)
-	//orm.RegisterDataBase("default", "postgres", "postgres://robins:myfunzone2030@localhost/robins?sslmode=disable")
-	//name := "default"
-	//force := false
-	//verbose := true
-	//orm.Debug = true
-	//err := orm.RunSyncdb(name, force, verbose)
-	//if err != nil {
-	//	fmt.Println(err)
-	//}
+	//orm.RegisterModel(new(AuthUser))
+	orm.RegisterModelWithPrefix("snaphy_", new(AuthUser))
+	// orm.RegisterDataBase("default", "mysql", "root:root@/orm_test?charset=utf8")
+	orm.RegisterDriver("postgres", orm.DRPostgres)
+	database, user, password := getDatabaseCredentials()
+	connString := fmt.Sprintf("postgres://%s:%s@localhost/%s?sslmode=disable", user, password, database)
 
+	orm.RegisterDataBase("default", "postgres", connString )
+	name := "default"
+	force := false
+	verbose := true
+	orm.Debug = true
+	err := orm.RunSyncdb(name, force, verbose)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	insertData()
 }
+
+
+func insertData(){
+	auth_user := new(AuthUser)
+	auth_user.First = randomdata.FirstName(randomdata.RandomGender)
+	auth_user.Last = randomdata.LastName()
+	auth_user.Email = randomdata.Email()
+	auth_user.Password = randomdata.Digits(6)
+	auth_user.Reg_key = randomdata.Digits(16)
+
+	o := orm.NewOrm()
+	o.Insert(auth_user)
+}
+
+
+
+//Get the database name, username and password info for postgresql.
+func getDatabaseCredentials() (string, string, string){
+	database := beego.AppConfig.String("postgres::database")
+	user := beego.AppConfig.String("postgres::user")
+	password := beego.AppConfig.String("postgres::password")
+	return  database, user, password
+}
+
+
+
 
 
 

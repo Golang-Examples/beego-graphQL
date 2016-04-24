@@ -7,7 +7,6 @@ import (
 	 _ "github.com/graphql-go/graphql"
 	 _ "github.com/graphql-go/handler"
 	"github.com/graphql-go/graphql"
-
 )
 
 
@@ -28,19 +27,15 @@ func (graphCtrl *GraphQLController) Any(){
 		panic("Error getting object")
 	}
 
-
-
 	opts := gqlhandler.NewRequestOptions(graphCtrl.Ctx.Request)
-
 	params := graphql.Params{Schema: schema, RequestString: opts.Query}
-
 	responseData := graphql.Do(params)
 	if len(responseData.Errors) > 0 {
 		beego.Trace("Failed to execute graphql operation", responseData.Errors)
 		panic(responseData.Errors)
 	}
 
+	beego.Info(responseData.Data)
 	graphCtrl.Data["json"] = responseData.Data
-	beego.Info("Sending response", responseData)
 	graphCtrl.ServeJSON()
 }
