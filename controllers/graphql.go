@@ -15,19 +15,39 @@ type GraphQLController struct {
 	beego.Controller
 }
 
+// @router / [get]
+func (graphCtrl *GraphQLController) GetAll(){
+	graphQL(graphCtrl)
+}
 
-// @Title any
-// @Description GraphQL for all data type
-// @Success 200 {string}
-// @router /
-func (graphCtrl *GraphQLController) Any(){
-	schema, err := schemas.GetSchemaObject()
-	if err != nil{
-		beego.Trace("Error getting object")
-		panic("Error getting object")
-	}
 
+// @router / [post]
+func (graphCtrl *GraphQLController) Post(){
+	graphQL(graphCtrl)
+}
+
+
+
+
+
+func graphQL(graphCtrl *GraphQLController){
+	schema := schemas.GetSchemaObject()
 	opts := gqlhandler.NewRequestOptions(graphCtrl.Ctx.Request)
+	/*defer func(){
+		if r := recover(); r != nil {
+			//Schema not loaded dynamically
+			beego.Error("Schema not loaded dynamically. Now trying to  loading schema dynamically", r)
+			schemas.LoadSchema(true)
+			schema = schemas.GetSchemaObject()
+			serveJson(graphCtrl, schema, opts)
+		}
+	}()*/
+
+	serveJson(graphCtrl, schema, opts)
+}
+
+
+func serveJson(graphCtrl *GraphQLController, schema graphql.Schema, opts *gqlhandler.RequestOptions){
 	params := graphql.Params{Schema: schema, RequestString: opts.Query}
 	responseData := graphql.Do(params)
 	if len(responseData.Errors) > 0 {
@@ -35,7 +55,7 @@ func (graphCtrl *GraphQLController) Any(){
 		panic(responseData.Errors)
 	}
 
-	beego.Info(responseData.Data)
+	//beego.Info(responseData.Data)
 	graphCtrl.Data["json"] = responseData.Data
 	graphCtrl.ServeJSON()
 }

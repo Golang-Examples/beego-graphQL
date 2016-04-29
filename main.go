@@ -38,9 +38,9 @@ func configLog(){
 		//Remove data from console..
 		beego.BeeLogger.DelLogger("console")
 	}
+	beego.BeeLogger.Async()
 
-
-	beego.SetLogFuncCall(true)
+	//beego.SetLogFuncCall(true)
 
 }
 

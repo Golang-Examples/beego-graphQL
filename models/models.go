@@ -36,16 +36,6 @@ func init() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	before := makeTimestamp()
-	for i := 0; i< 1000000; i++ {
-		insertData()
-	}
-
-	after := makeTimestamp()
-	diff := after - before
-	beego.Info("Data added in ", diff)
-
-
 }
 
 func makeTimestamp() int64 {

@@ -13,22 +13,29 @@ import (
 )
 
 func init() {
-
 	ns := beego.NewNamespace("/api",
 		beego.NSNamespace("/v1",
 			beego.NSNamespace("/graphql",
 				beego.NSInclude(
 					&controllers.GraphQLController{},
+
 				),
 			),
-			//beego.NSNamespace("/user",
-			//	beego.NSInclude(
-			//		&controllers.UserController{},
-			//	),
-			//),
+			beego.NSNamespace("/dynamic",
+				beego.NSNamespace("/loadOne",
+					beego.NSInclude(
+						&controllers.TestController{},
+					),
+				),
+
+				beego.NSNamespace("/loadAll",
+					beego.NSInclude(
+						&controllers.LoadAllController{},
+					),
+				),
+			),
 		),
 	)
-
 
 	beego.AddNamespace(ns)
 }
